@@ -34,9 +34,31 @@ void setup() {
 int value = 0;
 void loop() {
   // initial delay; equal to 2 hours in milliseconds.
-  delay(7200000);
+  //delay(7200000);
   // delay(120000); // two minute delay for test purposes!
+  delay(60000);
+  Serial.println("One minute has passed.");
+  delay(60000);
+  Serial.println("Two minutes have passed.");
+  delay(60000);
+  Serial.println("Three minutes have passed.");
+  delay(60000);
+  Serial.println("Four minutes have passed.");
+  delay(60000);
+  Serial.println("Five minutes have passed.");
+  delay(300000);
+  Serial.println("Ten minutes have passed.");
+  delay(600000);
+  Serial.println("Twenty minutes have passed.");
+  delay(600000);
+  Serial.println("Thirty minutes have passed.");
+  delay(1800000);
+  Serial.println("One hour has passed.");
+  delay(3600000);
+  Serial.println("Two hours have passed.");
   
+
+
   // tries to trigger, waits some milliseconds, tries again, repeats.
   delay(5000);
   ++value;
