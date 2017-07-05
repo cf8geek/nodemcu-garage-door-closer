@@ -33,9 +33,13 @@ void setup() {
 }
 int value = 0;
 void loop() {
+  Serial.println("Entered \"void loop()\"");
   // initial delay; equal to 2 hours in milliseconds.
   //delay(7200000);
   // delay(120000); // two minute delay for test purposes!
+  //delay(12000);
+  //Serial.println("12 seconds passed, skipping ahead");
+  
   delay(60000);
   Serial.println("One minute has passed.");
   delay(60000);
@@ -55,14 +59,13 @@ void loop() {
   delay(1800000);
   Serial.println("One hour has passed.");
   delay(3600000);
-  Serial.println("Two hours have passed.");
   
-
-
+  //Serial.print("pretending that ");
+  Serial.println("Two hours have passed.");
+while (1) {
   // tries to trigger, waits some milliseconds, tries again, repeats.
-  delay(5000);
   ++value;
-
+  Serial.println("geek code started");
 /*start*/
   Serial.print("connecting to ");
   Serial.println(host);
@@ -93,10 +96,11 @@ if (!client.connect(host, httpPort)) {
     String line = client.readStringUntil('\r');
     Serial.print(line);
   }
-  
   Serial.println();
   Serial.println("closing connection");
 /*stop*/
+  Serial.println("about to delay for a bit before the next try");
   delay(300000); // 5 minutes
-  //  delay(30000); // 30 seconds
-}
+//  delay(30000); // 30 seconds
+  Serial.println("delay done, restarting now...");
+}}
